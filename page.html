@@ -6,11 +6,19 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body id = "container">
-    <form>
+    <form id = "form">
         <input type = "text" id = "input">
         <input type = "button" value = "Submit" id = "submit" > 
     </form>
     <script src = "connect_api.js">
+    </script>
+    <script>
+        function autocompletion(){
+            var input = document.getElementById("input");
+            var results = new google.maps.places.Autocomplete(input);
+        }
+    </script>
+    <script type= "text/javascript" src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBwR9JPEt2Mks0YBc8F1dwOVElQQ7h_o8g&libraries=places&callback=autocompletion">
     </script>
 </body>
 </html>
