@@ -14,11 +14,8 @@ const getTime = (offset) =>{
     let utcTime =  offsetTime + time;
     let newTime = utcTime + (offset * 1000);
     let stringDate = `${new Date(newTime)}`;
-    
     let a = stringDate.split(" ");
-    
     let b = a[4].split(":");
-    
     return b[0]+":"+b[1];
     
 }
@@ -29,12 +26,8 @@ const processResponse = (response) => {
     let feels = `${JSON.stringify(response.main.feels_like)}`;
     let humidity = `${JSON.stringify(response.main.humidity)}`;
     let time = getTime(response.timezone);
-
-    
-    body.innerHTML = weather+ "   " + temp + "   " + time + "   " + feels + "  " + humidity;
-
-    console.log(`${JSON.stringify(response)}`);
-    console.log("chicken");
+    greeting.innerHTML = weather+ "   " + temp + "   " + time + "   " + feels + "  " + humidity;
+    greeting.innerHTML = `${JSON.stringify(response)}`;
 }
 
 const getWeather = async() =>{

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>HUBBA</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body id = "container" onload = "chooseBg()">
+    <div id = "greeting">
+        <h3>Weather</h3>
+    </div>
+    <form id = "form">
+        <input type = "text" id = "input">
+        <input type = "button" value = "Submit" id = "submit" > 
+    </form>
+    <script src = "connect_api.js">
+    </script>
+    <script>
+        let first = "url(https://api.time.com/wp-content/uploads/2017/04/2.gif)";
+        let second = "url(https://i0.wp.com/www.fiz-x.com/wp-content/uploads/2015/02/looping-gifs-of-supercell-thunderstorms-1.gif)";
+        let third = "url(https://api.time.com/wp-content/uploads/2017/04/hollingshead.gif)";
+        let fourth = "url(https://i.gifer.com/9pwX.gif)";
+        let fifth = "url(https://api.time.com/wp-content/uploads/2017/04/121.gif?w=800&quality=85)";
+
+        function chooseBg(){
+            let gifArray = [first, second, third, fourth, fifth];
+            let bg = gifArray[Math.floor(Math.random()/0.2)];
+            document.body.style.backgroundImage = bg;
+        }
+
+
+        function autocompletion(){
+            var options = {
+                types: ["(cities)"]
+            };
+            var input = document.getElementById("input");
+            var results = new google.maps.places.Autocomplete(input, options);
+        }
+    </script>
+    <script type= "text/javascript" src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBwR9JPEt2Mks0YBc8F1dwOVElQQ7h_o8g&libraries=places&callback=autocompletion">
+    </script>
+</body>
+</html>
