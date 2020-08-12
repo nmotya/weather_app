@@ -8,12 +8,13 @@
 </head>
 <body id = "container" onload = "chooseBg()">
     <div id = "greeting">
-        <h3>Weather</h3>
+        <h3>World Weather</h3>
     </div>
-    <form id = "form">
+    <form >
         <input type = "text" id = "input">
-        <input type = "button" value = "Submit" id = "submit">   
+        <input type = "button" value = "Submit" id = "submit"> 
     </form>
+     
     <script src = "connect_api.js">
     </script>
     <script>
@@ -28,7 +29,6 @@
             let bg = gifArray[Math.floor(Math.random()/0.2)];
             document.body.style.backgroundImage = bg;
         }
-
 
         function autocompletion(){
             var options = {
