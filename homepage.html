@@ -24,12 +24,14 @@
         let fourth = "url(https://i.gifer.com/9pwX.gif)";
         let fifth = "url(https://api.time.com/wp-content/uploads/2017/04/121.gif?w=800&quality=85)";
 
+        //Randomly picks a background out of the 5 gifs
         function chooseBg(){
             let gifArray = [first, second, third, fourth, fifth];
             let bg = gifArray[Math.floor(Math.random()/0.2)];
             document.body.style.backgroundImage = bg;
         }
 
+        //Implants the autcomplete funcitonality into the search bar
         function autocompletion(){
             var options = {
                 types: ["(cities)"]

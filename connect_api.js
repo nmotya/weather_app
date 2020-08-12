@@ -61,6 +61,7 @@ const convertTemp = (temp) => {
     return Math.round(faren);
 }
 
+//takes the weather ID data from the API and concatenates it into a url to retrieve an icon representing the current weather
 const imageLink = (icon) => {
     return `http://openweathermap.org/img/wn/${icon}@2x.png`
 }
