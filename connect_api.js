@@ -50,7 +50,7 @@ const processResponse = (response) => {
         $("#results").append(`<div class = result-text><h3><span class = desc>Humidity: </span> ${humidity + "%"}</h3></div>`);
         $("#results").append(`<div class = result-text><h3><span class = desc>Daily min: </span> ${min+ `ºF`}</h3></div>`);
         $("#results").append(`<div class = result-text><h3><span class = desc>Daily max: </span> ${max+ `ºF`}</h3></div>`);
-        $("#container").append("<a href= homepage.html><div id = restart><p id = imtired>Home</p></div></a>");
+        $("#container").append("<a href= index.html><div id = restart><p id = imtired>Home</p></div></a>");
         $("input:submit").attr('placeholder','Some New Text');
     });
 }
